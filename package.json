@@ -1,0 +1,38 @@
+{
+  "name": "botanalytics-microsoftbotframework-middleware",
+  "version": "0.0.1",
+  "description": "Microsoft BotBuilder Middleware for Botanalytics",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Botanalytics/botanalytics-microsoftbotframework-middleware.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Botanalytics/botanalytics-microsoftbotframework-middleware/issues"
+  },
+  "homepage": "https://github.com/Botanalytics/botanalytics-microsoftbotframework-middleware#readme",
+  "keywords": [
+    "botbuilder",
+    "bots",
+    "botanalytics",
+    "analytics",
+    "metrics",
+    "chatbots",
+    "facebook messenger",
+    "telegram",
+    "email",
+    "slack",
+    "kik",
+    "skype",
+    "teams",
+    "microsoft teams",
+    "twilio"
+  ],
+  "author": "Enis Gayretli",
+  "license": "MIT",
+  "dependencies" : {
+    "request": "2.74.0",
+    "botbuilder": "3.2.3",
+    "restify": "4.1.1"
+  }
+}
