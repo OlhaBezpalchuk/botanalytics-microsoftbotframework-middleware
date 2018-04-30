@@ -1,17 +1,17 @@
-var request = require('request')
+var request = require('request');
 module.exports = function(credentials) {
   if (!credentials || !credentials.token) {
     throw new Error('No token specified');
   }
   BotanalyticsMiddleware = {};
 
-  BotanalyticsMiddleware.receive = function(session, next) {
+  BotanalyticsMiddleware.receive = function(session, args, next) {
     sendToBotanalytics(session,false,next);
-  }
+  };
 
-  BotanalyticsMiddleware.send = function(session, next) {
+  BotanalyticsMiddleware.send = function(session, args, next) {
     sendToBotanalytics(session,true,next);
-  }
+  };
   function sendToBotanalytics(session,is_sender_bot,next) {
          request({
             url: 'https://botanalytics.co/api/v1/messages/microsoft-bot-framework/',
@@ -34,4 +34,4 @@ module.exports = function(credentials) {
    });
  }
  return BotanalyticsMiddleware;
-}
+};
