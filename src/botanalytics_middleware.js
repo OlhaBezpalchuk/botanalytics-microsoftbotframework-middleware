@@ -26,7 +26,7 @@ module.exports = function(credentials) {
     }, function(error, response, body){
         if(error) {
           next(error);
-        } else if (response.statusCode != 200 || response.statusCode != 201) {
+        } else if (response.statusCode !== 200 && response.statusCode !== 201) {
           next(new Error("Unexpected Status Code from Botanalytics API"));
         }else{
           next();
